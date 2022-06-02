@@ -6,16 +6,16 @@ import {IconContext} from "react-icons"
 export function Login(){
     let [fullName,setFullName]=useState("");
     let [userName,setUserName]=useState("");
-    let [password,setPassword]=useState("");
+    let [groupNo,setgroupNo]=useState("");
     let [email,setEmail]=useState("");
-    let [phone,setPhone]=useState("");
+    let [profileNo,setprofileNo]=useState("");
     let errors={};
-    let [error,setEror]=useState({fullName:null,userName:null,password:null,email:null,phone:null,message:null});
+    let [error,setEror]=useState({fullName:null,userName:null,groupNo:null,email:null,profileNo:null,message:null});
     let submitHandler=(e)=>{
         e.preventDefault();
 
         if(Validate()){
-            let values ={fullName,userName,password,email,phone}
+            let values ={fullName,userName,groupNo,email,profileNo}
         }
         
        
@@ -23,7 +23,7 @@ export function Login(){
     
     let Validate=()=>{
       let regularrstr = /^[a-zA-Z]{3,15}$/;
-      let regularrage = /^[0-9]{11}$/;
+      let regularrage = /^[0-9]$/;
       let regularmail=/^([a-zA-Z0-9_]{3,15})@([a-zA-Z0-9]{2,10})\.([a-z]{2,7})$/
         
       if(!(fullName.match(regularrstr))){
@@ -35,11 +35,11 @@ export function Login(){
         if(!(email.match(regularmail))){
           errors.email="Enter valid email";
       }
-        if(!(password.match("Choose User Group"))){
-          errors.password="password lenght must be 4 digit";
+        if(!(groupNo.match("Choose User Group"))){
+          errors.groupNo="please choose your group";
       }
-      if(!(phone.match(regularrage))){
-        errors.phone="phone lenght must be 11 digit";
+      if(!(profileNo.match(regularrage))){
+        errors.profileNo="profileNo must be digit";
     }
     else{
       errors.message="Submit Successed"
@@ -54,14 +54,14 @@ export function Login(){
     let getUserNameValue=(e)=>{
         setUserName(e.target.value)
     }
-    let getUserpasswordValue=(e)=>{
-      setPassword(e.target.value)
+    let getUsergroupNoValue=(e)=>{
+      setgroupNo(e.target.value)
   }
   let getUserEmailValue=(e)=>{
     setEmail(e.target.value)
 }
-let getUserPhoneValue=(e)=>{
-  setPhone(e.target.value)
+let getUserprofileNoValue=(e)=>{
+  setprofileNo(e.target.value)
 }
     return(
     <div className="bg-light my-3" style={{width:'100%'}}>
@@ -98,11 +98,11 @@ let getUserPhoneValue=(e)=>{
    <Form.Text className="text-danger">{error.email}</Form.Text>
   </Form.Group>
 
-  <Form.Group controlId="formBasicPassword">
+  <Form.Group controlId="formBasicgroupNo">
     <p style={{fontWeight:'bold'}}>User Group</p>
     <Form.Select type="text"
-    value={password}
-    onChange={(event)=>getUserpasswordValue(event)}
+    value={groupNo}
+    onChange={(event)=>getUsergroupNoValue(event)}
     >
       <option value="Choose User Group">Choose User Group</option>
       <option value="1">1</option>
@@ -110,20 +110,20 @@ let getUserPhoneValue=(e)=>{
       <option value="3">3</option>
     </Form.Select>
     
-    <Form.Text className="text-danger">{error.password}</Form.Text>
+    <Form.Text className="text-danger">{error.groupNo}</Form.Text>
   </Form.Group>
-  <Form.Group controlId="formBasicPhone">
+  <Form.Group controlId="formBasicprofileNo">
     <p style={{fontWeight:'bold'}}>Assign Profile</p>
     <Form.Select type="text" 
-   value={phone}
-   onChange={(event)=>getUserPhoneValue(event)}
+   value={profileNo}
+   onChange={(event)=>getUserprofileNoValue(event)}
    >
       <option>Choose profile</option>
       <option>1</option>
       <option>2</option>
       <option>3</option>
      </Form.Select>
-   <Form.Text className="text-danger">{error.phone}</Form.Text>
+   <Form.Text className="text-danger">{error.profileNo}</Form.Text>
    <Form.Text className="text-success">{error.message}</Form.Text>
   </Form.Group>
   
