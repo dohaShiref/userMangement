@@ -64,7 +64,7 @@ export default function Table (){
   <tbody>
       
       <tr className="theader" style={{backgroundColor:'rgba(249,250,252,255)'}}>
-          <td><input className="checkk" type="checkbox" onClick={changecolor}/></td>
+          <td><input className="checkk" type="checkbox" /></td>
           <td>Name</td>
           <td>User Name</td>
           <td>Email Address</td>
