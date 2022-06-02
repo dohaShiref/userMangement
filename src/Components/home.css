@@ -1,0 +1,91 @@
+.homepage{
+    margin: 1%;
+    margin-left: 1%;
+    display: flex;
+    justify-content: space-between;
+   
+}
+body{
+    background-color: beige;
+}
+.homepage .title{
+    font-size: 19px;
+    font-weight: bold;
+ 
+    
+}
+.homepage button{
+   background-color: rgb(2, 177, 95);
+   color: white;
+   border-radius: 5px;
+   border: none;
+   height: 40px;
+   float: right;
+    
+}
+.contTable{
+    border: 2px lightgray solid;
+    border-radius: 10px;
+    margin: 10px;
+    width: 83%;
+    margin-left:16% ;
+}
+.firstrow{
+    margin: 1%;
+}
+.secondrow{
+    margin: 2%;
+}
+ #firstinput{
+    width: 280px;
+}
+.firstrow input, .firstrow select{
+    margin-left: 1%;
+    border: 2px lightgray solid;
+    border-radius: 5px;
+    height: 40px;
+    width: 150px;
+    color: black;
+    font-weight: bold;
+}
+.firstrow .linkspan{
+    margin-left: 1%;
+    color: rgb(19, 126, 226);
+    
+}
+.links,.linksbtn{
+    background-color: rgba(228,231,239,255);
+    
+    height: 30px; 
+    margin-left: 1%;
+    border:none;
+    border-radius: 5px;
+    color: black;
+}
+ .linksbtn{
+   
+    font-size: 12px;
+    font-weight: bold;
+   
+} 
+.secondrow a{
+    margin-left: 1%;
+    color: black;
+}
+.theader td{
+    color:grey ;
+}
+
+  .trow td,select{
+    color:black ;
+    font-weight:500;
+}
+label{
+    position: absolute;
+    top:105px;
+}
+
+.alltime::placeholder-show{
+    padding-top: 40px;
+
+}
