@@ -18,15 +18,15 @@ export default function Navbar (){
 <nav className="navbar navbar-expand-lg bg-light" style={{height:'40px'}}>
   <div className="container-fluid" style={{display:'flex',justifyContent:'space-between'}}>
 
-  <div class="btn-group dropstart">
-  <button type="button" class="btn bg-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+  <div className="btn-group dropstart">
+  <button type="button" className="btn bg-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     
 <BsList/>
   </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
+  <ul className="dropdown-menu">
+    <li><a className="dropdown-item" href="#">Menu item</a></li>
+    <li><a className="dropdown-item" href="#">Menu item</a></li>
+    <li><a className="dropdown-item" href="#">Menu item</a></li>
   </ul>
 </div>
    

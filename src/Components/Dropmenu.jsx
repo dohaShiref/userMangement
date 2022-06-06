@@ -24,7 +24,7 @@ export default function Dropmenu (props){
     <li><button className="dropdown-item" type="button">Another action</button></li>
     <li><button className="dropdown-item" type="button">Something else here</button></li>
   </ul> */}
-  <select class="form-select" aria-label="Default select example"
+  <select className="form-select" aria-label="Default select example"
   //  style={{backgroundColor:'rgba(5,14,45,255)',border:'none',color:'rgb(122, 120, 120)'}}
   style={{
     backgroundColor: isActive ? 'green' : 'rgba(5,14,45,255)',
